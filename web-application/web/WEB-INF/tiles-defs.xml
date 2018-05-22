@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+
+<!--
+     This is a blank Tiles definition file with a commented example.
+-->
+
+<tiles-definitions>
+
+    <!-- sample tiles definitions
+    <definition name=".mainLayout" path="/common/layouts/classicLayout.jsp">
+        <put name="title"  value="Sample Page Title" />
+        <put name="header" value="/common/header.jsp" />
+        <put name="menu"   value=".mainMenu" />
+        <put name="footer" value="/common/footer.jsp" />
+        <put name="body"   value=".portal.body" />
+    </definition>
+
+    <definition name=".mainMenu" path="/common/layouts/vboxLayout.jsp" >
+        <putList name="list" >
+            <add value=".menu.links" />
+            <add value=".menu.taglib.references" />
+            <add value=".menu.printer.friendly" />
+            <add value=".menu.old.documents" />
+      </putList>
+    </definition>
+
+    <definition name="aPage" extends=".mainLayout">
+        <put name="title"  value="Another Title" />
+        <put name="body"   value=".aPage.body" />
+    </definition>
+
+    end samples -->
+
+    <definition name="${YOUR_DEFINITION_HERE}">
+    </definition>
+
+    <definition name="layout" path="/layout.jsp" />
+
+    <definition name="noMapping" extends="layout">
+        <put name="title" value="No mapping" />
+        <put name="body" value="/noMapping.html" />
+        <put name="firstNavigation" value="Home" />
+        <put name="currentPage" value="Error" />
+        <put name="pageTitle" value="Error Occured" />
+        <put name="pageDesc" value="" />
+    </definition>
+
+    <definition name="error" extends="layout">
+        <put name="title" value="Error" />
+        <put name="body" value="/general-error.html" />
+        <put name="firstNavigation" value="Home" />
+        <put name="currentPage" value="Error" />
+        <put name="pageTitle" value="Error Occured" />
+        <put name="pageDesc" value="" />
+    </definition>
+            
+    <definition name="captureFeedback" extends="layout">
+        <put name="title" value="Feedback" />
+        <put name="body" value="/page/captureFeedback.jsp" />
+        <put name="firstNavigation" value="Home" />
+        <put name="currentPage" value="Feedback" />
+        <put name="pageTitle" value="Feedback" />
+        <put name="pageDesc" value="Add customer feedback" />
+    </definition>
+
+    <definition name="reviewFeedback" extends="layout">
+        <put name="title" value="Reports" />
+        <put name="body" value="/page/reviewFeedback.jsp" />
+        <put name="firstNavigation" value="Home" />
+        <put name="currentPage" value="Reports" />
+        <put name="pageTitle" value="Reports" />
+        <put name="pageDesc" value="View customer feedback" />
+    </definition>
+    
+    <definition name="engagement" extends="layout">
+        <put name="title" value="Engagement" />
+        <put name="body" value="/page/engagement.jsp" />
+        <put name="firstNavigation" value="Home" />
+        <put name="currentPage" value="Engagement" />
+        <put name="pageTitle" value="Engagement" />
+        <put name="pageDesc" value="Engagement operations" />
+    </definition>
+
+    <definition name="applicationDefaultPage" extends="layout">
+        <put name="title" value="Application" />
+        <put name="body" value="/page/applicationOperations.jsp" />
+        <put name="firstNavigation" value="Home" />
+        <put name="currentPage" value="Applicaiton" />
+        <put name="pageTitle" value="Application" />
+        <put name="pageDesc" value="Application operations" />
+    </definition>
+    
+    <definition name="defaultUserPage" extends="layout">
+        <put name="title" value="Users" />
+        <put name="body" value="/page/userOperations.jsp" />
+        <put name="firstNavigation" value="Home" />
+        <put name="currentPage" value="Users" />
+        <put name="pageTitle" value="User Operations" />
+        <put name="pageDesc" value="Add/ Edit user" />
+    </definition>
+
+</tiles-definitions>

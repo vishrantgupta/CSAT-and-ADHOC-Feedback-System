@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration>
+
+    <appender name="errorFile" class="org.apache.log4j.RollingFileAppender">
+        <param name="Append" value="true" />
+        <param name="File" value="C:/app/customer_feedback/logs/error.log" />
+        <param name="MaxFileSize" value="2MB" />
+        <param name="MaxBackupIndex" value="25" />
+        <param name="threshold" value="error" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d|[%t]|%-5p|%c|%x - %m%n" />
+        </layout>
+    </appender>
+
+    <appender name="debugFile" class="org.apache.log4j.RollingFileAppender">
+        <param name="Append" value="true" />
+        <param name="File" value="C:/app/customer_feedback/logs/debug.log" />
+        <param name="MaxFileSize" value="2MB" />
+        <param name="MaxBackupIndex" value="50" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d|[%t]|%-5p|%c|%x - %m%n" />
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="trace" />
+            <param name="LevelMax" value="debug" />
+            <param name="LevelMax" value="info" />
+        </filter>
+    </appender>
+	
+    <appender name="hibernateLog" class="org.apache.log4j.RollingFileAppender">
+        <param name="Append" value="true" />
+        <param name="File" value="C:/app/customer_feedback/logs/hibernate.log" />
+        <param name="MaxFileSize" value="2MB" />
+        <param name="MaxBackupIndex" value="50" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d|[%t]|%-5p|%c|%x - %m%n" />
+        </layout>
+		
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="trace" />
+            <param name="LevelMax" value="debug" />
+            <param name="LevelMax" value="info" />
+        </filter>
+    </appender>
+	
+    <logger name="org.hibernate">
+        <level value="all" />
+        <appender-ref ref="hibernateLog"/>        
+    </logger>    
+    
+    <logger name="com.vishrant">
+        <level value="all" />
+        <appender-ref ref="debugFile"/>       
+    </logger>
+    	
+    <root>
+        <priority value="all" />
+        <appender-ref ref="errorFile" />
+    </root>
+
+</log4j:configuration>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login_main_bg"
+    android:orientation="vertical" >
+    
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/login_bg" />
+
+	    <LinearLayout
+	        android:id="@+id/lin_all"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+	        android:orientation="vertical">
+	
+	        <EditText
+	            android:id="@+id/edtTxtUserName"
+	            android:layout_width="match_parent"
+	            android:layout_height="25dp"
+	            android:layout_marginLeft="30dp"
+	            android:layout_marginRight="30dp"
+	            
+	            android:background="@drawable/user_strip"
+	            android:ems="10"
+	            android:hint="@string/userName"
+	            android:maxLength="15"
+	            android:paddingBottom="2dp"
+	            android:paddingLeft="7dp"
+	            android:paddingTop="2dp"
+	            android:singleLine="true"
+	            android:textSize="12sp" >
+	
+	            <requestFocus />
+	        </EditText>
+	
+	        <EditText
+	            android:id="@+id/edtTxtPassword"
+	            android:layout_width="match_parent"
+	            android:layout_height="25dp"
+	            android:layout_marginLeft="30dp"
+	            android:layout_marginRight="30dp"
+	            android:layout_marginTop="10dp"
+	            android:background="@drawable/user_strip"
+	            android:ems="10"
+	            android:hint="@string/password"
+	            android:maxLength="15"
+	            android:paddingBottom="2dp"
+	            android:paddingLeft="7dp"
+	            android:paddingTop="2dp"
+	            android:inputType="textPassword"
+	            android:singleLine="true"
+	            android:textSize="12sp" >
+	        </EditText>
+	
+	        <Button
+	            android:id="@+id/btnLoginSubmit"
+	            android:layout_width="match_parent"
+	            android:layout_height="25dp"
+	            android:layout_marginLeft="30dp"
+	            android:layout_marginRight="30dp"
+	            android:layout_marginTop="10dp"
+	            android:background="@drawable/login_btn_new"
+	            android:ems="10"
+	            android:text="@string/login"
+	            android:textColor="#ffffff"
+	            android:textSize="12sp" />
+	        
+	        <ImageView
+	            android:layout_width="fill_parent"
+	            android:layout_height="match_parent"
+	            android:adjustViewBounds="true"
+	            android:layout_marginLeft="30dp"
+	            android:layout_marginRight="30dp"
+	            android:layout_marginTop="20dp"
+	            android:contentDescription="@string/app_name"
+	            android:src="@drawable/text_logo" />
+	        
+	    </LinearLayout>
+    </FrameLayout>
+    
+</RelativeLayout>
